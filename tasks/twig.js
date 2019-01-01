@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       variable: 'window.JST',
       separator: '\n',
       template: null,
-      each_template: '{{ variable }}["{{ filepath }}"] = Twig.twig({ data: {{ compiled }} });',
+      each_template: '{{ variable }}["{{ filepath }}"] = Twig.twig({ id: "{{ filepath }}", data: {{ compiled }} });',
       template_key: function(path) { return path; }
     });
 
